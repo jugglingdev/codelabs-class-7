@@ -14,7 +14,13 @@ As an alternative for simple objects, it is also possible to pass in optional pa
 
 ### Facade Pattern
 
+This pattern is useful when wanting to cover up ugly code, or rather, relegate it to a single place, so that clean code is out front.  A great use case for the facade pattern is when working with APIs.
 
+All that code that includes the method, headers, and thenables?  Simplify it so that it stays in one function (like `getFetch()`) and clean up every place where `fetch()` was previously called.
+
+By doing this, it's much easier to change implementation.  Let's say you want to use `axios` instead of `fetch`.  In that case, you only need to change the ugly code instead of every spot where you called `fetch()`.
+
+### 
 
 ## Destructuring
 
