@@ -52,3 +52,5 @@ chatRoom.addUser(user1);
 chatRoom.addUser(user2);
 
 chatRoom.sendMessage('Hello, everyone!');
+// Alice received a new message: 'Hello, everyone!'
+// Bob received a new message: 'Hello, everyone!'

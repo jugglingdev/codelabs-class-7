@@ -22,9 +22,9 @@ By doing this, it's much easier to change implementation.  Let's say you want to
 
 ### Observer Pattern
 
-In the observer pattern, when one object changes, it alerts and updates all its dependents (observers).
+In the observer pattern, when one object changes, it alerts and updates all its dependents (observers).  This pattern can be designed with a class in mind or with a function.
 
-
+One of my favorite practical applications for this pattern is a messaging app.  In it, there are two classes, `ChatRoom` (observable) and `User` (observer).  You first instantiate users and then add them to the chat room.  Finally, you can send the chat room a message and all users will be notified.
 
 ## Destructuring
 
