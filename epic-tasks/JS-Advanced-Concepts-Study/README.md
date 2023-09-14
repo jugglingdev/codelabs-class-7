@@ -36,6 +36,8 @@ Destructuring is a clean and readable way to extract values from arrays or prope
 
 ## Memoization
 
+Got slow code?  Memoization is a great optimization technique that caches the results of expensive function calls and returns those results when the same inputs occur again.  This makes memoization great for slow functions, fetching external resources, and dynamic programming with recursive functions.
+
 ## Callbacks
 
 ## Promises
