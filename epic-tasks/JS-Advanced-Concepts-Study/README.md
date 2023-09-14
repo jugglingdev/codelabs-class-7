@@ -40,6 +40,10 @@ Got slow code?  Memoization is a great optimization technique that caches the re
 
 ## Callbacks
 
+A callback function is passed as an argument to another function to be executed after a given task is completed.  Callbacks are used in asynchronous operations and event handling.  
+
+Think of the last time you went to the mechanic or dropped your dog off at the vet.  They promised to call you back when everything was done, right?  That's exactly what happens here.  A function is called with the callback passed as a parameter.  Once the function is done, at the end, it calls the callback with whatever data it has.  Then, the callback is executed.
+
 ## Promises
 
 ## Async/Await
