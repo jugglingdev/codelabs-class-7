@@ -28,7 +28,11 @@ One of my favorite practical applications for this pattern is a messaging app.  
 
 ## Destructuring
 
+Destructuring is a clean and readable way to extract values from arrays or properties from objects and assign them to variables.  It can also be used with function parameters.  Destructuring is also useful for renaming variables, swapping variables, and using default values.  It uses JSON format on the left side of the assignment operator with the array or object name on the right side.
+
 ## Spread Operator
+
+
 
 ## Memoization
 
