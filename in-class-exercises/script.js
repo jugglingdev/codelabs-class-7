@@ -70,7 +70,24 @@ console.groupEnd();
 
 // Exercise 3
 
+console.groupCollapsed('Exercise 3');
 
+    async function fetchPosts() {
+        const url = 'https://jsonplaceholder.typicode.com/posts?_limit=10';
+
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+            console.log(data);
+        } catch(err) {
+            console.log('Uh oh');
+            console.log(err);
+        }
+    }
+
+    fetchPosts();
+
+console.groupEnd();
 
 // Exercise 4
 
