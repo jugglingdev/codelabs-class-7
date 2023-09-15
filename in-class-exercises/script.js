@@ -26,14 +26,53 @@ class Observer {
     }
 }
 
-const subject = new Subject();
-const observer1 = new Observer();
-const observer2 = new Observer();
-const observer3 = new Observer();
+console.groupCollapsed('Exercise 1');
 
-subject.addObserver(observer1);
-subject.addObserver(observer2);
-subject.addObserver(observer3);
+    const subject = new Subject();
+    const observer1 = new Observer();
+    const observer2 = new Observer();
+    const observer3 = new Observer();
 
-subject.notifyObservers();
+    subject.addObserver(observer1);
+    subject.addObserver(observer2);
+    subject.addObserver(observer3);
+
+    subject.notifyObservers();
+
+console.groupEnd();
+
+// Exercise 2
+
+const person = {
+    name: 'John',
+    age: 30,
+    address: {
+        city: 'New York',
+        country: 'USA',
+    },
+};
+
+const fruits = ['apple', 'banana', 'cherry', 'date'];
+
+// Destructuring
+
+const { name: personName, age: personAge } = person;
+const [ , item2, , item4 ] = fruits;
+const { address: { city, country } } = person;
+
+console.groupCollapsed('Exercise 2');
+
+    console.log(personName, personAge);
+    console.log(item2, item4);
+    console.log(city, country);
+
+console.groupEnd();
+
+// Exercise 3
+
+
+
+// Exercise 4
+
+
 
