@@ -101,3 +101,8 @@ The neat thing about `async/await` is that it can be used with exiting Promise-b
 
 ## Reflection
 
+Overall, I enjoyed this venture into advanced JavaScript topics.  I'm grateful for this deep-dive because, although I've encountered many of these concepts before, I still learned something new.  
+
+Probably my favorite to go over was async JavaScript.  Learning about the Event Loop, Message Queue, and Call Stack helped me understand what goes on behind the scenes as the code is executing.  Breaking down the transition from callbacks to Promises to `async/await` helped me understand the pros and cons to each of the approaches and see how to keep code clean with a modern approach (for 2023).
+
+Let's go put it into practice!
