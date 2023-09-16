@@ -32,7 +32,19 @@ Destructuring is a clean and readable way to extract values from arrays or prope
 
 ## Spread Operator
 
+The spread operator (`...`) is used to spread elements from one iterable into another.  It can be used in the following 3 places:
 
+1. in function calls
+2. in array literals
+3. in object literals
+
+In function arguments, the spread operator allows you to work with a variable number of arguments as an array.
+
+When working with arrays, the spread operator can be used to copy an array and concatenate arrays.  Copying arrays is particularly useful when you need to preserve the original.
+
+Similarly, it's possible to clone and merge objects.
+
+Because strings are also iterable, it's possible to spread strings into a char array as well.
 
 ## Memoization
 
