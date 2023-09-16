@@ -44,6 +44,48 @@ A callback function is passed as an argument to another function to be executed 
 
 Think of the last time you went to the mechanic or dropped your dog off at the vet.  They promised to call you back when everything was done, right?  That's exactly what happens here.  A function is called with the callback passed as a parameter.  Once the function is done, at the end, it calls the callback with whatever data it has.  Then, the callback is executed.
 
-## Promises
+## Async JavaScript
 
-## Async/Await
+Asynchronous JavaScript is a programming paradigm that allows you to manage tasks that take time to complete (e.g. fetching data from a server or waiting for user input) without blocking the rest of the program.
+
+Key concepts related to async JavaScript include:
+
+### Event Loop, Call Stack, and Message Queue
+
+JavaScript is single-threaded, meaning it can only execute one piece of code at a time.  The *event loop* manages async code execution, ensuring that it doesn't block the main execution thread.  The event loop continuously checks the *call stack* and *message queue* for tasks to execute.
+
+The call stack keeps track of what code is running at what time.  It follows the last-in, first-out (LIFO) principle, meaning that the most recently called function is the first executed and removed from the stack.
+
+The message queue ensures that async tasks are processed in the order they were scheduled and don't interfere with the synchronous execution of the code.  It operates on a first-in, first-out (FIFO) principle, though timers such as `setTimeout()` can affect this.
+
+When the call stack is empty, the event loop takes the first task from the message queue and pushes it onto the call stack for execution.  This repeats for remaining tasks in the queue.
+
+Together, the event loop, call stack, and message queue ensure that the code in the main execution thread executes properly while allowing the async functions to take the time they need and get executed without interfering with the main thread.
+
+### Callback Hell
+
+AKA 'Pyramid of Doom', callback hell happens when multiple callbacks are nested in asynchronous code.  This makes the code difficult to read.  These nested callbacks may show up when there is a dependency on the result of a previous function or when handling errors.
+
+### Promises
+
+Enter Promises.  Promises solve the callback hell problem, brining structure and readability back to asynchronous code.  
+
+A Promise is an object that represents the eventual completion or failure of an async operation.  It can be in one of 3 states:
+    - **Pending**: the async operation is still ongoing
+    - **Fulfilled (Resolved)**: the async operation is complete and a result value is available
+    - **Rejected**: the async operation failed and an error reason is available
+
+Promises can be chained together to connect multiple async operations.  The `.then()` method specifies what should happen when a Promise is resolved.  Promises also have built-in error handling with the `.catch()` method.
+
+### Async/Await
+
+`async/await` is a powerful feature in JavaScript that simplifies asynchronous code, making it easier to read, maintain, and debug.  
+
+A function labeled with the keyword `async` returns a Promise.  Inside that function, the keyword `await` pauses the execution of the code until the Promise is resolved.
+
+Errors are handled with `try...catch` blocks.  When an `await` Promise rejects, it throws an exception that is caught with `try...catch`.
+
+The neat thing about `async/await` is that it can be used with exiting Promise-based code.  This is helpful when dealing with multiple async operations and complex error handling.  It brings even more structure and ease compared to using callbacks or Promises alone.
+
+## Reflection
+
